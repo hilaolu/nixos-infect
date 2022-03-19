@@ -38,6 +38,7 @@ makeConf() {
   ];
 }
 EOF
+  
   echo "substituters = https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store https://cache.nixos.org/" >> /etc/nix/nix.conf
 
   if isEFI; then
