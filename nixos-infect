@@ -39,10 +39,10 @@ makeConf() {
 }
 EOF
   
-  mkdir -p /etc/nix
-  echo "substituters = https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store https://cache.nixos.org/" >> /etc/nix/nix.conf
+  #mkdir -p /etc/nix
+  #echo "substituters = https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store https://cache.nixos.org/" >> /etc/nix/nix.conf
   mkdir -p ~/.config/nix
-  echo "substituters = https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store https://cache.nixos.org/" >> ~/.config/nix/nix.conf
+  echo "substituters = https://mirrors.ustc.edu.cn/nix-channels/store https://cache.nixos.org/" >> ~/.config/nix/nix.conf
   
   if isEFI; then
     bootcfg=$(cat << EOF
