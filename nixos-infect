@@ -26,6 +26,8 @@ makeConf() {
     $network_import
     $NIXOS_IMPORT
   ];
+  
+  nix.settings.substituters = [ "https://mirrors.ustc.edu.cn/nix-channels/store/" "https://nix-cache.phyza.it/" ];
 
   boot.cleanTmpDir = true;
   zramSwap.enable = true;
@@ -271,7 +273,7 @@ infect() {
 
   [[ -z "$NIX_CHANNEL" ]] && NIX_CHANNEL="nixos-21.11"
   nix-channel --remove nixpkgs
-  nix-channel --add "https://nixos.org/channels/$NIX_CHANNEL" nixos
+  nix-channel --add "https://mirrors.ustc.edu.cn/nix-channels/$NIX_CHANNEL" nixos
   nix-channel --update
 
   export NIXOS_CONFIG=/etc/nixos/configuration.nix
