@@ -281,7 +281,7 @@ infect() {
 
   export NIXOS_CONFIG=/etc/nixos/configuration.nix
 
-  nix-env --set \
+  nix-env --set -vv \
     -I nixpkgs=$HOME/.nix-defexpr/channels/nixos \
     -f '<nixpkgs/nixos>' \
     -p /nix/var/nix/profiles/system \
