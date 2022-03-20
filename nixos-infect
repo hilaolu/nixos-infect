@@ -36,7 +36,11 @@ makeConf() {
   boot.cleanTmpDir = true;
   zramSwap.enable = true;
   networking.hostName = "$(hostname)";
-  services.openssh.enable = true;
+  services.openssh = {
+    enable = true;
+    passwordAuthentication = false; 
+    challengeResponseAuthentication = false;
+  };
   users.users.root.openssh.authorizedKeys.keys = [$(while read -r line; do echo -n "
     \"$line\" "; done <<< "$keys")
   ];
