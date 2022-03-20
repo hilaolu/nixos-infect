@@ -29,6 +29,12 @@ makeConf() {
   
   #nix.settings.substituters = [ "https://mirrors.ustc.edu.cn/nix-channels/store/" "https://nix-cache.phyza.it/" ];
 
+  nix.binaryCaches = [
+    "https://mirrors.bfsu.edu.cn/nix-channels/store"
+    "https://mirrors.ustc.edu.cn/nix-channels/store"
+    "https://mirror.sjtu.edu.cn/nix-channels/store"
+  ];
+  
   boot.cleanTmpDir = true;
   zramSwap.enable = true;
   networking.hostName = "$(hostname)";
