@@ -45,7 +45,7 @@ and most importantly, simply didn't work for me!
 
 4) run the script with:
 ```
-  curl https://code.phyzait.moe/hilaolu/nixos-infect/raw/master/nixos-infect | NIX_CHANNEL=nixos-21.11 bash -x
+  curl https://code.phyzait.moe/hilaolu/nixos-infect/raw/master/nixos-infect | NIX_CHANNEL=nixos-unstable bash -x
 ```
 
 *NB*: This script wipes out the targeted host's root filesystem when it runs to completion.
